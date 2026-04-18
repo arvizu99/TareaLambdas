@@ -2,6 +2,7 @@ Este repositorio contiene dos clases que manipulan ArrayLists de valores String 
 Ambas clases contienen métodos estáticos que pueden utilizarse sin la necesidad de crear una instancia de dichas clases, 
 tienen propósitos meramente de utilería.
 La clase Main contiene demostraciones de como se pueden utilizar los métodos de ambas clases.
+Para utilizar las clases solo basta con ingresar a la carpeta src del repositorio y descargar e incluir la clase que necesites en tu proyecto java.
 
 Metodos de la clase Numeros:
 Todos los métodos de esta clase regresan un mensaje de error si los valores ingresados en los parámetros contienen un valor nulo o están vacíos 
