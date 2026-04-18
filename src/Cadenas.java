@@ -14,6 +14,9 @@ public class Cadenas {
                 hayNull = s == null;
                 break;
             }
+            if (letra==null){
+                hayNull=true;
+            }
             if (!hayNull) {
                 //verificar que sea numero o letra
                 try {
@@ -94,9 +97,14 @@ public class Cadenas {
     public static ArrayList<String> palabrasRepetidasMenosDeNVeces(HashMap<String,Integer> repetidas, Integer n){
         boolean hayNull = false;
         ArrayList<String> palabrasMenores = new ArrayList<>();
-        repetidas.entrySet().stream()
-                .filter((s)-> s.getValue()<n)
-                .forEach(s-> palabrasMenores.add(s.getKey()));
+        if (n==null) {
+            hayNull = true;
+        }
+        if (!hayNull) {
+            repetidas.entrySet().stream()
+                    .filter((s) -> s.getValue() < n)
+                    .forEach(s -> palabrasMenores.add(s.getKey()));
+        }
         return palabrasMenores;
     }
 

@@ -3,7 +3,8 @@ import java.util.stream.Collectors;
 
 public class Numeros {
 
-    public static void multiplicador(ArrayList<Integer> numeros, int mult) {
+    //multiplica todos los numeros de un ArrayList<Integer> por el valor de mult
+    public static void multiplicador(ArrayList<Integer> numeros, Integer mult) {
         boolean hayNull =false;
         if (!numeros.isEmpty()) {
             for (Integer numero : numeros) {
@@ -11,6 +12,9 @@ public class Numeros {
                 if (hayNull){
                     break;
                 }
+            }
+            if (mult == null){
+                hayNull=true;
             }
             if (!hayNull){
                 numeros.replaceAll(n -> n * mult);
@@ -50,26 +54,5 @@ public class Numeros {
             });
         }else System.out.println("El HashMap esta vacío");
     }
-
-
-
-    public static void base(ArrayList<Integer> numeros){
-        boolean hayNull = false;
-
-        if(!numeros.isEmpty()){
-            for(Integer s : numeros){
-                if (s==null){
-                    hayNull= true;
-                    break;
-                }
-            }
-            if (!hayNull){
-
-
-            }else System.out.println("Hay un valor Null en el arreglo");
-        }else System.out.println("El arreglo esta vacío");
-
-    }
-
 
 }
