@@ -10,8 +10,9 @@ y dependiendo de el tipo de valor que regresen, no hace nada o regresa un HashMa
 
 -public static void multiplicador(ArrayList<Integer> numeros, int mult)
   Este método transforma los valores Integer del ArrayList<Integer> y los multiplica por el valor de mult.
+
 -public static HashSet<Integer> cuadradosUnicosPares(ArrayList<Integer> numeros)
-  Este método crea un HashSet que contiene los cuadrados de los numeros pares únicos del ArrayList<Integer> entregado.
+Este método recibe un ArrayList de números Integer y regresa un HashSet con los números pares únicos elevados al cuadrado sin repetirse.
 
 -public static void mostrarCatalogoDescuentos(HashMap<String,Double> catalogo)
   Este método recibe un HashMap con el formato HashMap<String Articulo, Double precio> y muestra en la terminal 
