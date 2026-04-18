@@ -11,8 +11,10 @@ public class Cadenas {
         if(!palabras.isEmpty()) {
             //verificar que no haya null
             for (String s : palabras) {
-                hayNull = s == null;
-                break;
+                if (s==null) {
+                    hayNull = true;
+                    break;
+                }
             }
             if (letra==null){
                 hayNull=true;

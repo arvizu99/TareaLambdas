@@ -10,12 +10,14 @@ public class Main{
         for (int i = 1; i<=10; i++){
             nums.add(i);
         }
+        System.out.println("Arreglo numeros: "+nums);
         Numeros.multiplicador(nums,4);
-        System.out.println(nums);
+        System.out.println("Arreglo numeros por 4"+nums);
         nums.addLast(null);
         //se muestra el error por valor nulo
         Numeros.multiplicador(nums,1);
         nums.removeLast();
+        Numeros.multiplicador(new ArrayList<Integer>() ,2 );
 
         //se crea arraylist con cadenas
         ArrayList<String> cadenas = new ArrayList<>();
@@ -23,10 +25,20 @@ public class Main{
         cadenas.add("Taco");
         cadenas.add("Nada");
         //se muestran las palabras que no empiezan con N
+        System.out.println("Palabras \n"+cadenas);
         Cadenas.filtroSelectivo(cadenas,"N");
-        System.out.println(cadenas);
+        System.out.println("Palabras que no empiezan con la letra N \n"+cadenas);
         //se muestran las palabras que tengan más de 5 letras
+        cadenas.add("Palabra");
+        cadenas.add("cinco");
         Cadenas.filtroSelectivo(cadenas,"5");
+        System.out.println("Palabras que tienen mas de 5 letras \n"+cadenas);
+        cadenas.addLast(null);
+        Cadenas.filtroSelectivo(cadenas,"5");
+        cadenas.removeLast();
+        Cadenas.filtroSelectivo(cadenas,null);
+
+
 
         //se utiliza el metodo aMayusculas para transformar a mayúsculas todas las palabras de cadenas.
         ArrayList<String> mayus = Cadenas.aMayusculas(cadenas);
